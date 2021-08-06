@@ -1,6 +1,9 @@
-<h1>Movie index</h1>
-<ul class="list-group">
-  <% @movies.each do |movie| %>
-    <li class="list-group-item"><%= link_to movie.title, movie_path(movie) %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <h1>Movie index</h1>
+  <ul class="list-group">
+    <% @movies.each do |movie| %>
+      <li class="list-group-item"><%= link_to movie.title, movie_path(movie) %></li>
+    <% end %>
+  </ul>
+<%= link_to  "View Lists", lists_path %>
+</div>

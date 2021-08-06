@@ -1,7 +1,9 @@
 <div class="container">
   <h1><%= @movie.title %></h1>
   <p><%= @movie.overview %></p>
-  <p><%= @movie.rating %> <i class="fas fa-lemon"</i></p>
-  <p><%= @movie.poster_url %></p>
+  <p><%= @movie.rating %>🍋</p>
+  <div class="container">
+    <p><img src=<%= @movie.poster_url %> style="width:200px;" alt=<% @movie.title + "poster" %> ></p>
+  </div>
   <%= link_to  "Back to Movies", movies_path %>
 </div>

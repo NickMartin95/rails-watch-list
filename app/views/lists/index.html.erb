@@ -1,6 +1,11 @@
-<h1>Lists</h1>
-<ul class="list-group">
-  <% @lists.each do |list| %>
-    <li class="list-group-item"><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <h1>Lists</h1>
+    <ul class="list-group">
+      <% @lists.each do |list| %>
+        <li class="list-group-item"><%= link_to list.name, list_path(list) %></li>
+      <% end %>
+    </ul>
+  <%= link_to  "Create a new list", new_list_path %>
+  <br>
+  <%= link_to  "Back to Movies", movies_path %>
+</div>

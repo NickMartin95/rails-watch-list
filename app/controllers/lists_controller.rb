@@ -15,9 +15,24 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     if @list.save
-      redirect_to movies_path
+      redirect_to lists_path
     else
       render :new
+    end
+
+    def edit
+      @list = List.edit
+
+    end
+
+    def update
+      @list.update(list_params)
+      redirect ti list_path
+    end
+
+    def destroy
+      @list.def destroy
+      redirect to lists_path
     end
   end
 
